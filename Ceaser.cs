@@ -77,8 +77,10 @@ namespace SecurityLibrary
 
         public int Analyse(string plainText, string cipherText)
         {
+            plainText = plainText.ToLower();
+            cipherText = cipherText.ToLower();
+            
             int key;
-
             key = (int)plainText[0] - (int)cipherText[0];
 
             if (key < 0)
